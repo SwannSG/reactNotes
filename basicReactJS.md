@@ -6,7 +6,7 @@ ReactJS implements HTML templating inside JavaScript.
 
 The library is split into two broad modules *React* and *ReactDOM*.
 
-ReactJS works with a shadow DOM to avoid frequent interaction with the real DOM. When actual DOM updates are to take place, React computes the difference between the shadow real DOM, and just applies the differences.
+ReactJS works with a shadow DOM to avoid frequent interaction with the real DOM. When actual DOM updates are to take place, React computes the difference between the shadow DOM and real DOM, and just applies the differences.
 
 Acual DOM updates, which show up on the screen, use the *ReactDOM.render* method.
 
@@ -14,7 +14,7 @@ Acual DOM updates, which show up on the screen, use the *ReactDOM.render* method
 var React = require('react');               // global React
 var ReactDOM = require('react-dom');        // global ReactDOM
 
-ReactDOM(<JSX expression>, <node inside real DOM>)  // place a number of nodes at a specific node
+ReactDOM(<JSX expression> or <JS node representation>, <node inside real DOM>)  // place a number of nodes at a specific node
 ```
 
 ##JSX##
@@ -31,7 +31,7 @@ May only have a single parent, which may or may not include children nodes.
 
 Self-closing HTML tags must be closed with a closing tag.
 
-Attribute *<p className="para">* converts to *<p class="para">*.
+Attribute `<p className="para">` converts to `<p class="para">`.
 
 Items inside curly brackets {....} belong to the JavaScript world.
 
