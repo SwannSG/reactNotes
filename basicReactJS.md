@@ -21,7 +21,7 @@ ReactDOM(<JSX expression> or <JS node representation>, <node inside real DOM>)  
 
 JSX is a DOM node describing language, that looks something like JavaScript and HTML, that can be used to generate nodes for the shadow DOM.
 
-JSX understands elements eg. <p> and attributes <p someAttr='attribute'>.
+JSX understands elements eg. `<p>` and attributes `<p someAttr='attribute'>`.
 
 JSX is converted to native JavaScript.
 
