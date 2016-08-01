@@ -29,25 +29,22 @@ JSX is converted to native JavaScript.
 
 May only have a single parent, which may or may not include children nodes.
 
-Self-closing HTML tags must be closed with a closing tag.
-
-Attribute `<p className="para">` converts to `<p class="para">`.
-
 Items inside curly brackets {....} belong to the JavaScript world.
 
 ```JavaScript
-
 // examples of JSX expressions
-<p>Hello there</p>
-
-var height = 10;
-var width = 10;
-(
-    <img
-        src = http://mysource.com/img1.jpg              // no quotes, no separating commas
-        alt = River picture
-        height = {height}                               // reference height in JS domain
-        width = {width}
-    </img>                                              // notice closing tag for image
-)
+<script type="text/babel">
+    var jsWidth = 30;
+    ReactDOM.render(
+        (<img
+            src="http://cdn.24.co.za/files/Cms/General/d/2991/10adb60279214215baf3bc15813a2ce3.png"
+            alt="Nelson Mandela"
+            class = "niceImg"
+            any-attribute = 'any-value'
+            width={jsWidth}                         // notice jsWidth is replaced by 30
+        />),
+        document.getElementById('id2')              // insert these node(s) at location 'id2'
+      );
+    </script>
 ```
+Between the `<img` and end `/>` we have something similar to HTML. This is a JSX expression. Notice a multiline JSX expression is placed in parenthesis. We can place the contents on multiple lines for readability.

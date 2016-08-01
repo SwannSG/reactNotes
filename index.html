@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Basic Example</title>
+    <script src="../react-0.14.7/build/react.js"></script>
+    <script src="../react-0.14.7/build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+</head>
+<body>
+    <div id="id1"></div>
+    <div id="id2">test</div>
+    <script type="text/babel">
+        var jsWidth = 30;
+        ReactDOM.render(
+            (<img
+                src="http://cdn.24.co.za/files/Cms/General/d/2991/10adb60279214215baf3bc15813a2ce3.png"
+                alt="Nelson Mandela"
+                class = "niceImg"
+                any-attribute = 'any-value'
+                width={jsWidth}
+            />),
+            document.getElementById('id2')
+          );
+        </script>
+    <script src="tryReact.js"></script>
+</body>
+</html>
